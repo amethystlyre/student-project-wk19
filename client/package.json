@@ -3,7 +3,9 @@
   "scripts": {
     "dev": "webpack-dev-server",
     "build": "webpack",
-    "start": "webpack && webpack serve"
+    "start": "webpack && webpack serve",
+    "watch": "webpack --watch"
+    
   },
   "author": "2U",
   "license": "UNLICENSED",
