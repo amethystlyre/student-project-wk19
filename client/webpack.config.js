@@ -12,7 +12,11 @@ module.exports = () => {
       install: './src/js/install.js',
       cards: './src/js/cards.js'
     },
-
+    devServer: {
+      // The `hot` option is to use the webpack-dev-server in combination with the hot module replacement API.
+      hot: 'only',
+    },
+    devtool: 'inline-source-map',
     // TODO: Add the correct output
     output: {
       filename: '[name].bundle.js',
@@ -66,6 +70,7 @@ module.exports = () => {
             loader: 'babel-loader',
             options: {
               presets: ['@babel/preset-env'],
+              plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime'],
             },
           },
         },

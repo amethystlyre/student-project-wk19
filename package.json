@@ -10,7 +10,7 @@
     "build": "cd client && npm run build",
     "install": "cd server && npm i && cd ../client && npm i",
     "client": "cd client && npm start",
-    "watch": "cd client && npm run watch"
+    "watch": "concurrently \"cd client && npm run watch\" \"cd server && npm run server\""
   },
   "keywords": [],
   "author": "",
